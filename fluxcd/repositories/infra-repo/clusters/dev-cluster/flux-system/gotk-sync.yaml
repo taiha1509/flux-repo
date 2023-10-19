@@ -8,10 +8,10 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: fluxcd-2022
+    branch: main
   secretRef:
     name: flux-system
-  url: https://github.com/marcel-dempers/docker-development-youtube-series.git
+  url: https://github.com/taiha1509/flux-repo.git
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./kubernetes/fluxcd/repositories/infra-repo/clusters/dev-cluster
+  path: ./fluxcd/repositories/infra-repo/clusters/dev-cluster
   prune: true
   sourceRef:
     kind: GitRepository
